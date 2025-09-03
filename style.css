@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  height: 1000px;
+
+  color: #333;
+  background: #1e1b4b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.game-box{
+  width: 700px;
+  height: 700px;
+  position: relative; 
+  background-color: rgba(255, 255, 255, 0.373);
+  box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(200px);
+  display: flex;
+  border-radius: 15px;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  padding: 21px;
+  gap: 21px;
+
+}
+
+.card{
+  width: 148.75px;
+  height: 148.75px; 
+  background-color: #ede9fe; 
+  border-radius: 15px;
+}
+
+
+.new_card{
+  position: absolute;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  font-size: 80px;
+  font-weight: 900;
+  width: 148.8px;
+  height: 148.8px; 
+  border-radius: 15px;
+  background: #ede9fe63;
+  transition: all 0.2s ease-out;
+
+}
+
