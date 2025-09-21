@@ -50,7 +50,7 @@ body {
   height: var(--cell-size); 
   border-radius: var(--border-radius);
   background: #00000063;
-  transition: all 100ms ease-in-out;
+  transition: all 200ms ease-in-out;
   display: flex;
   justify-content: center; 
   align-items: center; 
