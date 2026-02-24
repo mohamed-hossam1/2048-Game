@@ -21,6 +21,8 @@ body {
 }
 
 .game-board{
+  touch-action: none;
+  overscroll-behavior: none;
   display: grid;
   grid-template-columns: repeat(var(--grid-size), var(--cell-size));
   grid-template-rows: repeat(var(--grid-size), var(--cell-size));
