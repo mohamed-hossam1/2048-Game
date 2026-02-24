@@ -26,7 +26,11 @@ function setupTouchInput() {
   window.addEventListener("touchstart", (e) => {
     startX = e.touches[0].clientX
     startY = e.touches[0].clientY
-  })
+  }, { passive: true })
+
+  window.addEventListener("touchmove", (e) => {
+    e.preventDefault() 
+  }, { passive: false })
 
   window.addEventListener("touchend", async (e) => {
     endX = e.changedTouches[0].clientX
@@ -36,14 +40,12 @@ function setupTouchInput() {
     const diffY = endY - startY
 
     if (Math.abs(diffX) > Math.abs(diffY)) {
-      // حركة أفقية
       if (diffX > 0) {
         await processMove("ArrowRight")
       } else {
         await processMove("ArrowLeft")
       }
     } else {
-      // حركة رأسية
       if (diffY > 0) {
         await processMove("ArrowDown")
       } else {
